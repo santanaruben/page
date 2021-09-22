@@ -1,0 +1,102 @@
+[
+    {
+        "id": 0,
+        "name": "Ethereum Certification System",
+        "description": "Decentralized application for certification of courses and university degrees",
+        "img": "./img/trabajos/certification-system.mp4",
+        "type": "video",
+        "link": "upta.000webhostapp.com/?cedula=18110778",
+        "repo": "github.com/santanaruben/certificados"
+    },
+    {
+        "id": 1,
+        "name": "CryptoJustice",
+        "description": "System for Legal Procedures using Ethereum and React",
+        "img": "./img/trabajos/cryptojustice.jpg",
+        "type": "img",
+        "link": "thecryptojustice.com",
+        "repo": "github.com/santanaruben/cryptojustice"
+    },
+    {
+        "id": 2,
+        "name": "Toll Road System",
+        "description": "Ethereum regulated system of toll roads on which vehicles pay to drive on them",
+        "img": "./img/trabajos/tollRoad-system.jpg",
+        "type": "img",
+        "link": "git.academy.b9lab.com/ETH-SUB-exam-projects/rubensantana-code",
+        "repo": "github.com/santanaruben/TollRoadSystem"
+    },
+    {
+        "id": 3,
+        "name": "Ethereum Rock Paper Scissors Game",
+        "description": "Classic game where the players bet an ETH amount, then each player submits their move, and the contract rewards the winner with the Ether wagered",
+        "img": "./img/trabajos/rockPaperScissors-system.png",
+        "type": "img",
+        "link": null,
+        "repo": "github.com/santanaruben/rockPaperScissors"
+    },
+    {
+        "id": 4,
+        "name": "Descentralized Library",
+        "description": "Ethereum library system where users can have book's ownership and transfer their books (ERC-721) to the library and to other users",
+        "img": "./img/trabajos/library-system.jpg",
+        "type": "img",
+        "link": null,
+        "repo": "github.com/santanaruben/ethereum/tree/master/projects/biblioteca"
+    },
+    {
+        "id": 5,
+        "name": "Descentralized Store",
+        "description": "Ethereum Store system, using an ERC-20 as the coin necesary to make transactions",
+        "img": "./img/trabajos/store-system.png",
+        "type": "img",
+        "link": null,
+        "repo": "github.com/santanaruben/store"
+    },
+    {
+        "id": 6,
+        "name": "eCommerce",
+        "description": "The store and services provided by Armani Engineering Corporation",
+        "img": "./img/trabajos/armani-engr.jpg",
+        "type": "img",
+        "link": "armani-engr.com",
+        "repo": null
+    },
+    {
+        "id": 7,
+        "name": "Shortener",
+        "description": "A corporate link shortener with statistics page, and traffic location",
+        "img": "./img/trabajos/armani-shortener.png",
+        "type": "img",
+        "link": "files.armani-engr.com",
+        "repo": null
+    },
+    {
+        "id": 8,
+        "name": "Business Website",
+        "description": "Enterprise website for design and engineering services",
+        "img": "./img/trabajos/designsmiranda.jpg",
+        "type": "img",
+        "link": "designsmiranda.com",
+        "repo": null
+    },
+    {
+        "id": 9,
+        "name": "Splitter System",
+        "description": "Amount splitter application for ethereum",
+        "img": "./img/trabajos/splitter-system.png",
+        "type": "img",
+        "link": null,
+        "repo": "github.com/santanaruben/splitter"
+    },
+    {
+        "id": 10,
+        "name": "Remittance System",
+        "description": "Remittance application for ethereum",
+        "img": "./img/trabajos/remittance.jpg",
+        "type": "img",
+        "link": null,
+        "repo": "github.com/santanaruben/remittance"
+    }
+    
+]

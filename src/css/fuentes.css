@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Oxanium-Light';
+    src: url('../fonts/Oxanium-Light.woff2') format('woff2'),
+         url('../fonts/Oxanium-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OstrichSans-Medium';
+    src: url('../fonts/OstrichSans-Medium.woff2') format('woff2'),
+         url('../fonts/OstrichSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GreatDayPersonalUse';
+    src: url('../fonts/GreatDayPersonalUse.woff2') format('woff2'),
+         url('../fonts/GreatDayPersonalUse.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url('../fonts/Montserrat-Thin.woff2') format('woff2'),
+         url('../fonts/Montserrat-Thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'blackswordregular';
+    src: url('../fonts/blacksword-webfont.woff2') format('woff2'),
+         url('../fonts/blacksword-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'cube';
+    src: url('../fonts/cube.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'theSkinny';
+    src: url('../fonts/theSkinny.woff2') format('woff2'),
+         url('../fonts/theSkinny.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cubic';
+    src: url('../fonts/Cubic.woff2') format('woff2'),
+         url('../fonts/Cubic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Inversionz';
+    src: url('../fonts/Inversionz.woff2') format('woff2'),
+         url('../fonts/Inversionz.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Italic-Bricks';
+    src: url('../fonts/Italic-Bricks.woff2') format('woff2'),
+         url('../fonts/Italic-Bricks.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
