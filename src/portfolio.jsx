@@ -27,7 +27,7 @@ class Portfolio extends Component {
       })
     }
     else {
-      fetch(`https://github.com/santanaruben/page/blob/main/public/json/trabajos.json`)
+      fetch(`https://raw.githubusercontent.com/santanaruben/page/main/public/json/trabajos.json`)
         .then(res => res.json())
         .then(trabajos => {
           this.setState({
