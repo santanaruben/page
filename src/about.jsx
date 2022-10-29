@@ -44,7 +44,7 @@ class About extends Component {
                 <span>ENG</span><br/><span onClick={(e) => this.verCredencial(e,'ingenieria','jpg','')} href='#'><i className="fa fa-user-graduate fa-3x" title="Click to see the credential"></i></span>
               </div>
               <div>
-                <span>MSC</span><br/><span onClick={(e) => this.verCredencial(e,'maestria','png',' - versión digital, en espera de recibimiento')} href='#'><i className="fa fa-user-graduate fa-3x" title="Click to see the credential"></i></span>{/*fa-graduation-cap fa-user-graduate*/}
+                <span>MSC</span><br/><span onClick={(e) => this.verCredencial(e,'maestria','png','')} href='#'><i className="fa fa-user-graduate fa-3x" title="Click to see the credential"></i></span>{/*fa-graduation-cap fa-user-graduate*/}
               </div>
             </div>
           </div>
