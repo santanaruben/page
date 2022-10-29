@@ -23,8 +23,8 @@ class Blog extends Component {
                   <a className="embedly-card" data-card-controls="0" data-card-theme="dark" href="https://medium.com/@rubensantana">Ruben Santana - Medium</a>
                   </div>
                   <div className="col-12 col-md-4 mt-1 text-center">
-                  <a className="twitter-timeline"  data-width="350" data-height="520"  data-theme="dark" href="https://twitter.com/rubensantana_?ref_src=twsrc%5Etfw">Tweets by Ruben Santana</a>
-                  {/* <a class="twitter-timeline" href="https://twitter.com/rubensantana_?ref_src=twsrc%5Etfw">Tweets by rubensantana_</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> */}
+                  <a className="twitter-timeline"  data-width="350" data-height="520"  data-theme="dark" href="https://twitter.com/0xRubens?ref_src=twsrc%5Etfw">Tweets by Ruben Santana</a>
+                  {/* <a class="twitter-timeline" href="https://twitter.com/0xRubens?ref_src=twsrc%5Etfw">Tweets by Ruben</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> */}
                   </div>
                 </div>
             </div>
