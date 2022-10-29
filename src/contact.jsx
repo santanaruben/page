@@ -26,7 +26,7 @@ class Contact extends Component {
           
             <div className="col-6 col-md-4 mb-2">
             
-              <a href='https://twitter.com/rubensantana_' target='_blank' rel="noopener noreferrer"><i className="fab fa-twitter fa-3x" title="Twitter"></i></a>
+              <a href='https://twitter.com/0xRubens' target='_blank' rel="noopener noreferrer"><i className="fab fa-twitter fa-3x" title="Twitter"></i></a>
               &nbsp;&nbsp;&nbsp;
               <a href='https://wa.me/584124435919' target='_blank' rel="noopener noreferrer"><i className="fab fa-whatsapp fa-3x" title="Whatsapp"></i></a>
               &nbsp;&nbsp;&nbsp;
