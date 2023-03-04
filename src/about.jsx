@@ -38,18 +38,19 @@ class About extends Component {
         
  
         <div className='row justify-content-center textoAboutCredenciales mb-3'>
-<!--         <div className="col-6 col-md-4">
+{/*         
+          <div className="col-6 col-md-4">
             <h6><b>Degrees</b></h6>
             <div className="divCredenciales">
               <div>
                 <span>ENG</span><br/><span onClick={(e) => this.verCredencial(e,'ingenieria','jpg','')} href='#'><i className="fa fa-user-graduate fa-3x" title="Click to see the credential"></i></span>
               </div>
               <div>
-                <span>MSC</span><br/><span onClick={(e) => this.verCredencial(e,'maestria','png','')} href='#'><i className="fa fa-user-graduate fa-3x" title="Click to see the credential"></i></span>{/*fa-graduation-cap fa-user-graduate*/}
+                <span>MSC</span><br/><span onClick={(e) => this.verCredencial(e,'maestria','png','')} href='#'><i className="fa fa-user-graduate fa-3x" title="Click to see the credential"></i></span>
               </div>
             </div>
           </div>
--->
+*/}
           <div className="col-6 col-md-4">
             <h6><b>Certifications</b></h6>
             <div className="divCredenciales">
