@@ -64,7 +64,7 @@ class About extends Component {
         <div className='row justify-content-center mb-2'>
           <div className="col-11 col-md-8">
           <hr/>
-            <a className="btn btn-light" href='./docs/CV_Ruben_Santana_2021_en.pdf' target="_blank" rel="noopener noreferrer"><b>Resume</b></a>
+            <a className="btn btn-light" href='./docs/CV_Ruben_Santana_2022_en.pdf' target="_blank" rel="noopener noreferrer"><b>Resume</b></a>
           </div>
         </div>
       </div>
