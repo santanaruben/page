@@ -27,9 +27,9 @@ class About extends Component {
         <div className='row justify-content-center'>
           <div className="col-11 col-md-8">
             {/* <p>This is the <b>About</b> Component</p> */}
-            <img id="fotoAbout" src="./img/ruben.jpg" className="img-fluid align-self-center rounded" alt=""/>
+            // <img id="fotoAbout" src="./img/ruben.jpg" className="img-fluid align-self-center rounded" alt=""/>
             <hr/>
-            <p className="textoAbout">I'm Rubén, I specialize in creating decentralized applications using Ethereum Smart Contracts. I'm a Computer Science Engineer and I have a Master's Degree in Software Development. Also I have an online career as an Ethereum Developer from <a className="linkClaro" href="https://academy.b9lab.com/" target='_blank' rel="noopener noreferrer">B9LabAcademy</a>.
+            <p className="textoAbout">Hi, I'm Rubén, I specialize in creating decentralized applications using Ethereum Smart Contracts. I'm a Computer Science Engineer and I have a Master's Degree in Software Development. Also I have an online career as an Ethereum Developer from <a className="linkClaro" href="https://academy.b9lab.com/" target='_blank' rel="noopener noreferrer">B9LabAcademy</a>.
             </p>
             <p className="textoAbout">I worked as a Sap Abap Developer in Unicon-ArcelorMittal for two years and as a Teacher for the UPT Aragua the last seven years.</p>
             <hr/>
