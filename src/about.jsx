@@ -36,9 +36,9 @@ class About extends Component {
           </div>
         </div>
         
-{/* 
+ 
         <div className='row justify-content-center textoAboutCredenciales mb-3'>
-          <div className="col-6 col-md-4">
+ {/*         <div className="col-6 col-md-4">
             <h6><b>Degrees</b></h6>
             <div className="divCredenciales">
               <div>
