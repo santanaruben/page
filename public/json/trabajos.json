@@ -133,5 +133,14 @@
     "type": "img",
     "link": "files.armani-engr.com",
     "repo": null
+  },
+  {
+    "id": 15,
+    "name": "Promptopia",
+    "description": "Promptopia is an open-source AI prompting tool for modern world to discover, create and share creative prompts",
+    "img": "./img/trabajos/promptopia.jpg",
+    "type": "img",
+    "link": "forprompts.vercel.app",
+    "repo": "github.com/santanaruben/project_promptopia"
   }
 ]
