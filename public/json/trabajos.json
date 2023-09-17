@@ -5,7 +5,7 @@
     "description": "Play to Earn community",
     "img": "./img/trabajos/playerblocks.jpg",
     "type": "img",
-    "link": "playerblocks.com",
+    "link": "playerblocks.netlify.app",
     "repo": "github.com/santanaruben/playerblocks"
   },
   {
@@ -23,7 +23,7 @@
     "description": "Validate profiles in Proof Of Humanity and get rewarded",
     "img": "./img/trabajos/vouchmarket.jpg",
     "type": "img",
-    "link": "vouch.market",
+    "link": "vouchmarket.netlify.app",
     "repo": "github.com/santanaruben/vouchmarket"
   },
   {
