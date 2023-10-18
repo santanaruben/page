@@ -142,5 +142,14 @@
     "type": "img",
     "link": "forprompts.vercel.app",
     "repo": "github.com/santanaruben/project_promptopia"
+  },
+  {
+    "id": 16,
+    "name": "Cars Showcase",
+    "description": "A site made with next, typescript, and tailwind that manages the data of a car rental or a car sales store.",
+    "img": "./img/trabajos/cars-showcase.jpg",
+    "type": "img",
+    "link": "carscabinet.vercel.app",
+    "repo": "github.com/santanaruben/cars_showcase"
   }
 ]
