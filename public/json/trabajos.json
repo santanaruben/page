@@ -151,14 +151,5 @@
     "type": "img",
     "link": "carscabinet.vercel.app",
     "repo": "github.com/santanaruben/cars_showcase"
-  },
-  {
-    "id": 17,
-    "name": "Staking Project",
-    "description": "Decentralized application where users can coordinate a group funding effort",
-    "img": "./img/trabajos/staking-project.png",
-    "type": "img",
-    "link": "staking-project.vercel.app",
-    "repo": "github.com/scaffold-eth/se-2-challenges/tree/challenge-1-decentralized-staking"
   }
 ]
