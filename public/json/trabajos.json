@@ -158,7 +158,7 @@
     "description": "An EVM faucet site made with solidity, next, typescript, and tailwind to withdraw funds from a selected chain.",
     "img": "./img/trabajos/faucet.jpg",
     "type": "img",
-    "link": "faucet-ethkipu.vercel.app",
-    "repo": "github.com/santanaruben/faucet"
+    "link": "faucet.ethkipu.org",
+    "repo": "github.com/ethkipu/faucet"
   }
 ]
