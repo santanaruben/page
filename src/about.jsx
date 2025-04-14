@@ -31,7 +31,7 @@ class About extends Component {
             <hr/>
             <p className="textoAbout">Hi, I'm Rubén, I specialize in creating decentralized applications using Ethereum Smart Contracts. I'm a Computer Science Engineer and I have a Master's Degree in Software Development. Also I have an online career as an Ethereum Developer from <a className="linkClaro" href="https://academy.b9lab.com/" target='_blank' rel="noopener noreferrer">B9LabAcademy</a>.
             </p>
-            <p className="textoAbout">I worked as a Sap Abap Developer in Unicon-ArcelorMittal for two years and as a teacher at UPT Aragua for 8 years. Now I work as a freelancer.</p>
+            <p className="textoAbout">I worked as a Sap Abap Developer in Unicon-ArcelorMittal for two years and as a teacher at UPT Aragua for 12 years. I also make projects on demand.</p>
             <hr/>
           </div>
         </div>
