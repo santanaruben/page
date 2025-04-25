@@ -19,6 +19,15 @@
   },
   {
     "id": 2,
+    "name": "ETH Venezuela Landing",
+    "description": "Ethereum Venezuela community page",
+    "img": "./img/trabajos/eth-venezuela.png",
+    "type": "img",
+    "link": "ethvenezuela.org",
+    "repo": "github.com/ethvenezuela/landing"
+  },
+  {
+    "id": 3,
     "name": "Faucet",
     "description": "An EVM faucet site made with solidity, next, typescript, and tailwind to withdraw funds from a selected chain.",
     "img": "./img/trabajos/faucet.jpg",
@@ -27,7 +36,7 @@
     "repo": "github.com/ethereumaragua/faucet"
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Ethereum Certification System",
     "description": "Decentralized application for certification of courses",
     "img": "./img/trabajos/certificados.jpg",
@@ -36,7 +45,7 @@
     "repo": "github.com/ethereumaragua/certificados"
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "PlayerBlocks",
     "description": "Play to Earn community",
     "img": "./img/trabajos/playerblocks.jpg",
@@ -45,7 +54,7 @@
     "repo": "github.com/santanaruben/playerblocks"
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "UBI Burner",
     "description": "Universal Basic Income deflationary tool",
     "img": "./img/trabajos/ubiburner.jpg",
@@ -54,7 +63,7 @@
     "repo": "github.com/santanaruben/ubiburner"
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "Vouch Market",
     "description": "Validate profiles in Proof Of Humanity and get rewarded",
     "img": "./img/trabajos/vouchmarket.jpg",
@@ -63,7 +72,7 @@
     "repo": "github.com/santanaruben/vouchmarket"
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "CryptoJustice",
     "description": "System for Legal Procedures using Ethereum and React",
     "img": "./img/trabajos/cryptojustice.jpg",
@@ -72,7 +81,7 @@
     "repo": "github.com/santanaruben/cryptojustice"
   },
   {
-    "id": 8,
+    "id": 9,
     "name": "Toll Road System",
     "description": "Ethereum regulated system of toll roads on which vehicles pay to drive on them",
     "img": "./img/trabajos/tollRoad-system.jpg",
@@ -81,7 +90,7 @@
     "repo": "github.com/santanaruben/TollRoadSystem"
   },
   {
-    "id": 9,
+    "id": 10,
     "name": "Ethereum Rock Paper Scissors Game",
     "description": "Classic game where the players bet an ETH amount, then each player submits their move, and the contract rewards the winner with the Ether wagered",
     "img": "./img/trabajos/rockPaperScissors-system.png",
@@ -90,7 +99,7 @@
     "repo": "github.com/santanaruben/rockPaperScissors"
   },
   {
-    "id": 10,
+    "id": 11,
     "name": "Descentralized Library",
     "description": "Ethereum library system where users can have book's ownership and transfer their books (ERC-721) to the library and to other users",
     "img": "./img/trabajos/library-system.jpg",
@@ -99,7 +108,7 @@
     "repo": "github.com/santanaruben/ethereum/tree/master/projects/biblioteca"
   },
   {
-    "id": 11,
+    "id": 12,
     "name": "Descentralized Store",
     "description": "Ethereum Store system, using an ERC-20 as the coin necesary to make transactions",
     "img": "./img/trabajos/store-system.png",
@@ -108,7 +117,7 @@
     "repo": "github.com/santanaruben/store"
   },
   {
-    "id": 12,
+    "id": 13,
     "name": "eCommerce",
     "description": "The store and services provided by Armani Engineering Corporation",
     "img": "./img/trabajos/armani-engr.jpg",
@@ -117,7 +126,7 @@
     "repo": null
   },
   {
-    "id": 13,
+    "id": 14,
     "name": "Business Website",
     "description": "Enterprise website for design and engineering services",
     "img": "./img/trabajos/designsmiranda.jpg",
@@ -126,7 +135,7 @@
     "repo": null
   },
   {
-    "id": 14,
+    "id": 15,
     "name": "Business Website",
     "description": "Enterprise website for electrical services",
     "img": "./img/trabajos/sautek.jpg",
@@ -135,7 +144,7 @@
     "repo": null
   },
   {
-    "id": 15,
+    "id": 16,
     "name": "Splitter System",
     "description": "Amount splitter application for ethereum",
     "img": "./img/trabajos/splitter-system.png",
@@ -144,7 +153,7 @@
     "repo": "github.com/santanaruben/splitter"
   },
   {
-    "id": 16,
+    "id": 17,
     "name": "Remittance System",
     "description": "Remittance application for ethereum",
     "img": "./img/trabajos/remittance.jpg",
@@ -153,7 +162,7 @@
     "repo": "github.com/santanaruben/remittance"
   },
   {
-    "id": 17,
+    "id": 18,
     "name": "Shortener",
     "description": "A corporate link shortener with statistics page, and traffic location",
     "img": "./img/trabajos/armani-shortener.png",
@@ -162,7 +171,7 @@
     "repo": null
   },
   {
-    "id": 18,
+    "id": 19,
     "name": "Promptopia",
     "description": "Promptopia is an open-source AI prompting tool for modern world to discover, create and share creative prompts",
     "img": "./img/trabajos/promptopia.jpg",
@@ -171,7 +180,7 @@
     "repo": "github.com/santanaruben/project_promptopia"
   },
   {
-    "id": 19,
+    "id": 20,
     "name": "Cars Showcase",
     "description": "A site made with next, typescript, and tailwind that manages the data of a car rental or a car sales store.",
     "img": "./img/trabajos/cars-showcase.png",
