@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://rubensantana.com"),
   title: "Ruben Santana - Blockchain Developer & Professor",
   description:
     "Experienced blockchain developer and computer science professor specializing in Solidity, Web3, and DeFi. 20+ projects in smart contracts and decentralized applications.",
@@ -65,6 +66,35 @@ export const viewport: Viewport = {
   maximumScale: 1,
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://rubensantana.com/#person",
+      name: "Ruben Santana",
+      url: "https://rubensantana.com",
+      jobTitle: "Smart Contract Engineer & Computer Science Professor",
+      description: "Experienced blockchain developer and computer science professor specializing in Solidity, Web3, and DeFi.",
+      sameAs: [
+        "https://github.com/santanaruben",
+        "https://www.linkedin.com/in/rubensantana/",
+        "https://x.com/0xrubens",
+        "https://t.me/rubensantana",
+      ],
+      knowsAbout: ["Blockchain", "Solidity", "Web3", "DeFi", "Smart Contracts"],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://rubensantana.com/#website",
+      url: "https://rubensantana.com",
+      name: "Ruben Santana Portfolio",
+      description: "Portfolio of blockchain applications, business solutions, and community platforms.",
+      publisher: { "@id": "https://rubensantana.com/#person" },
+    },
+  ],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -73,6 +103,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange={false}>
           <Suspense fallback={null}>{children}</Suspense>
         </ThemeProvider>

@@ -1,19 +1,22 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useLocale } from "@/components/locale-provider"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
 import { ThemeToggle } from "./theme-toggle"
+import { LanguageSwitcher } from "./language-switcher"
 
 const navItems = [
-  { href: "#about", label: "About" },
-  { href: "#featured", label: "Featured" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
+  { href: "#about", labelKey: "about" },
+  { href: "#featured", labelKey: "featured" },
+  { href: "#projects", labelKey: "projects" },
+  { href: "#contact", labelKey: "contact" },
 ]
 
 export function Navigation() {
+  const { t } = useLocale()
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -38,7 +41,7 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -48,14 +51,18 @@ export function Navigation() {
                   document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth" })
                 }}
               >
-                {item.label}
+                {t.nav[item.labelKey as keyof typeof t.nav]}
               </Link>
             ))}
-            <ThemeToggle />
+            <div className="flex items-center gap-2 pl-2 border-l border-border">
+              <LanguageSwitcher />
+              <ThemeToggle />
+            </div>
           </div>
 
-          {/* Mobile Navigation - Theme toggle and menu button */}
+          {/* Mobile Navigation - Language, Theme toggle and menu button */}
           <div className="md:hidden flex items-center space-x-2">
+            <LanguageSwitcher />
             <ThemeToggle />
             <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -77,7 +84,7 @@ export function Navigation() {
                     document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth" })
                   }}
                 >
-                  {item.label}
+                  {t.nav[item.labelKey as keyof typeof t.nav]}
                 </Link>
               ))}
             </div>

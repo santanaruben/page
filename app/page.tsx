@@ -1,3 +1,5 @@
+"use client"
+
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -10,6 +12,7 @@ import { ScrollToTop } from "@/components/scroll-to-top"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { FloatingActions } from "@/components/floating-actions"
 import { EnhancedCard } from "@/components/enhanced-card"
+import { LocaleProvider, useLocale } from "@/components/locale-provider"
 
 const featuredProjects = [
   {
@@ -25,15 +28,15 @@ const featuredProjects = [
     highlight: "🏆 Featured Project",
   },
   {
-    id: 6,
-    name: "UBI Burner",
-    description: "Universal Basic Income deflationary tool",
-    type: "DeFi Tool",
-    image: "/images/ubiburner.jpg",
-    link: "ubiburner.netlify.app",
-    repo: "github.com/santanaruben/ubiburner",
-    tags: ["Solidity", "UBI", "DeFi", "Economics"],
-    highlight: "🔥 Featured Project",
+    id: 21,
+    name: "Alicanto Group",
+    description: "Construction and engineering services company website",
+    type: "Business Website",
+    image: "/images/alicanto.jpg",
+    link: "alicantogroup.com",
+    repo: undefined,
+    tags: ["Business", "Contractor", "Services", "Engineering", "Construction"],
+    highlight: "🏆 Featured Project",
   },
 ]
 
@@ -47,6 +50,16 @@ const projects: Array<{
   tags: string[]
   image: string
 }> = [
+  {
+    id: 21,
+    name: "Alicanto Group",
+    description: "Construction and engineering services company website",
+    type: "Business Website",
+    link: "alicantogroup.com",
+    repo: undefined,
+    tags: ["Business", "Contractor", "Services", "Engineering", "Construction"],
+    image: "/images/alicanto.jpg",
+  },
   {
     id: 0,
     name: "ETH Aragua Landing",
@@ -272,33 +285,31 @@ const skills = [
   { category: "Standards", items: ["ERC-20", "ERC-721", "ERC-1155", "DeFi Protocols", "DAO Governance"] },
 ]
 
-const achievements = [
-  {
-    icon: <Award className="w-8 h-8" />,
-    title: "B9LAB Certified",
-    description: "Ethereum Developer Certification from London's premier blockchain academy",
-  },
-  {
-    icon: <Users className="w-8 h-8" />,
-    title: "Community Leader",
-    description: "Core ETH Venezuela & Co-founder ETH Aragua, reaching communities and developers",
-  },
-  {
-    icon: <Code2 className="w-8 h-8" />,
-    title: "Open Source Contributor",
-    description: "Multiple projects built with opensource principles, and contributing to Web3 education",
-  },
+const achievementConfig = [
+  { key: "b9lab" as const, icon: Award },
+  { key: "community" as const, icon: Users },
+  { key: "opensource" as const, icon: Code2 },
 ]
 
-export default function Portfolio() {
+function PortfolioContent() {
+  const { t } = useLocale()
+
   return (
     <div className="min-h-screen bg-background">
+      {/* Skip link for accessibility - off-screen until focused with Tab */}
+      <a
+        href="#main-content"
+        className="fixed left-4 top-0 -translate-y-full bg-emerald-600 text-white px-4 py-2 rounded-b-md font-medium z-[100] transition-transform focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2"
+      >
+        {t.a11y.skipToContent}
+      </a>
       {/* Navigation and Theme Toggle */}
       <Navigation />
       <ScrollToTop />
       <FloatingActions />
 
       {/* Hero Section */}
+      <main id="main-content">
       <section className="relative min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-8">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal direction="fade" delay={200}>
@@ -314,14 +325,13 @@ export default function Portfolio() {
                 />
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-2 sm:mb-3 lg:mb-4 text-balance bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                Ruben Santana
+                {t.hero.title}
               </h1>
               <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-3 sm:mb-4 lg:mb-6 text-balance">
-                Smart Contract Engineer & Computer Science Professor
+                {t.hero.subtitle}
               </p>
               <p className="text-base sm:text-lg lg:text-lg text-muted-foreground max-w-2xl mx-auto mb-4 sm:mb-6 lg:mb-8 text-pretty">
-                Experienced EVM developer and educator. Certified blockchain specialist building open-source solutions and contributing to
-                the decentralized ecosystem. Core Member ETH Venezuela & Co-founder ETH Aragua.
+                {t.hero.description}
               </p>
             </div>
           </ScrollReveal>
@@ -333,7 +343,7 @@ export default function Portfolio() {
                 size="lg"
                 className="bg-emerald-600 hover:bg-emerald-700 hover:scale-105 transition-all duration-300"
               >
-                <Link href="#featured">View Featured Work</Link>
+                <Link href="#featured">{t.hero.viewFeatured}</Link>
               </Button>
               <Button
                 variant="outline"
@@ -347,7 +357,7 @@ export default function Portfolio() {
                   rel="noopener noreferrer"
                 >
                   <FileText className="w-4 h-4 mr-2" />
-                  View Resume
+                  {t.hero.viewResume}
                 </Link>
               </Button>
               <Button
@@ -356,7 +366,7 @@ export default function Portfolio() {
                 asChild
                 className="hover:border-emerald-300 hover:text-white dark:hover:border-emerald-400 dark:hover:text-emerald-400 hover:scale-105 transition-all duration-300 bg-transparent"
               >
-                <Link href="#contact">Get in Touch</Link>
+                <Link href="#contact">{t.hero.getInTouch}</Link>
               </Button>
             </div>
           </ScrollReveal>
@@ -396,17 +406,17 @@ export default function Portfolio() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-emerald-50 dark:bg-emerald-950/20">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Key Achievements</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-foreground">{t.achievements.title}</h2>
           </ScrollReveal>
           <div className="grid md:grid-cols-3 gap-8">
-            {achievements.map((achievement, index) => (
-              <ScrollReveal key={index} delay={index * 200}>
+            {achievementConfig.map(({ key, icon: Icon }, index) => (
+              <ScrollReveal key={key} delay={index * 200}>
                 <Card className="text-center p-6 border-emerald-200 dark:border-emerald-800 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                   <div className="flex justify-center mb-4 text-emerald-600 hover:scale-110 transition-transform duration-300">
-                    {achievement.icon}
+                    <Icon className="w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{achievement.title}</h3>
-                  <p className="text-muted-foreground text-sm">{achievement.description}</p>
+                  <h3 className="text-xl font-semibold mb-2">{t.achievements[key].title}</h3>
+                  <p className="text-muted-foreground text-sm">{t.achievements[key].description}</p>
                 </Card>
               </ScrollReveal>
             ))}
@@ -418,9 +428,9 @@ export default function Portfolio() {
       <section id="featured" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-center mb-4">Featured Projects</h2>
+            <h2 className="text-3xl font-bold text-center mb-4">{t.featured.title}</h2>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Showcasing my most impactful work in blockchain development, community building, and business solutions.
+              {t.featured.subtitle}
             </p>
           </ScrollReveal>
 
@@ -437,9 +447,9 @@ export default function Portfolio() {
       {/* Blog Preview Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">Latest Articles</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">{t.blog.title}</h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Insights on blockchain development, Web3 education, and the future of decentralized technology.
+            {t.blog.subtitle}
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -458,17 +468,17 @@ export default function Portfolio() {
                   <span>Dec 2024</span>
                 </div>
                 <CardTitle className="text-lg group-hover:text-emerald-600 transition-colors">
-                  Privacy in DeFi: The Tornado Cash Case
+                  {t.blog.tornado.title}
                 </CardTitle>
                 <CardDescription>
-                  Exploring the implications of privacy tools in decentralized finance and regulatory challenges.
+                  {t.blog.tornado.description}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <Button variant="outline" size="sm" asChild className="hover:border-emerald-300 hover:text-white dark:hover:border-emerald-400 dark:hover:text-emerald-400">
                   <Link href="https://blog.aragua.org/blogs/la-privacidad-como-un-derecho-fundamental-el-caso-tornado-cash-y-las-sanciones-de-la-ofac" target="_blank" rel="noopener noreferrer">
                     <BookOpen className="w-4 h-4 mr-1" />
-                    Read More
+                    {t.blog.readMore}
                   </Link>
                 </Button>
               </CardContent>
@@ -489,11 +499,10 @@ export default function Portfolio() {
                   <span>Jan 2025</span>
                 </div>
                 <CardTitle className="text-lg group-hover:text-emerald-600 transition-colors">
-                  The Infinite Garden
+                  {t.blog.garden.title}
                 </CardTitle>
                 <CardDescription>
-                  A metaphor capturing Ethereum's essence: A garden is never something you finish, but something you
-                  always begin.
+                  {t.blog.garden.description}
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -504,7 +513,7 @@ export default function Portfolio() {
                     rel="noopener noreferrer"
                   >
                     <BookOpen className="w-4 h-4 mr-1" />
-                    Read More
+                    {t.blog.readMore}
                   </Link>
                 </Button>
               </CardContent>
@@ -525,12 +534,10 @@ export default function Portfolio() {
                   <span>Jan 2025</span>
                 </div>
                 <CardTitle className="text-lg group-hover:text-emerald-600 transition-colors">
-                  Blockchain Seminar 2025: Onboarding
+                  {t.blog.seminar.title}
                 </CardTitle>
                 <CardDescription>
-                  A comprehensive journey introducing blockchain technology and practical applications. The event
-                  brought together professors and tech enthusiasts in a learning, networking, and professional
-                  development space focused on Web3 initiation.
+                  {t.blog.seminar.description}
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -541,7 +548,7 @@ export default function Portfolio() {
                     rel="noopener noreferrer"
                   >
                     <BookOpen className="w-4 h-4 mr-1" />
-                    Read More
+                    {t.blog.readMore}
                   </Link>
                 </Button>
               </CardContent>
@@ -551,7 +558,7 @@ export default function Portfolio() {
           <div className="text-center mt-8">
             <Button asChild className="bg-emerald-600 hover:bg-emerald-700">
               <Link href="https://blog.aragua.org" target="_blank" rel="noopener noreferrer">
-                View All Articles
+                {t.blog.viewAll}
               </Link>
             </Button>
           </div>
@@ -561,66 +568,59 @@ export default function Portfolio() {
       {/* About Section */}
       <section id="about" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">{t.about.title}</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <Card>
               <CardHeader>
-                <CardTitle>Experience</CardTitle>
+                <CardTitle>{t.about.experience}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h4 className="font-semibold">Backend, Smart Contract Engineer</h4>
-                  <p className="text-sm text-muted-foreground">HODL Markets • 2025 - Present</p>
-                  <p className="text-sm">
-                    Specialized development of secure smart contracts and DeFi protocols. Conducting security reviews
-                    and optimizing code for efficiency.
-                  </p>
+                  <h4 className="font-semibold">{t.about.hodl.title}</h4>
+                  <p className="text-sm text-muted-foreground">{t.about.hodl.company}</p>
+                  <p className="text-sm">{t.about.hodl.description}</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Professor, Blockchain Certificate Program</h4>
-                  <p className="text-sm text-muted-foreground">UCAB • 2024</p>
-                  <p className="text-sm">Leading Solidity training courses and Web3 development methodologies.</p>
+                  <h4 className="font-semibold">{t.about.ucab.title}</h4>
+                  <p className="text-sm text-muted-foreground">{t.about.ucab.company}</p>
+                  <p className="text-sm">{t.about.ucab.description}</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Professor, Ethereum Developer Pack</h4>
-                  <p className="text-sm text-muted-foreground">ETHKIPU • 2024</p>
-                  <p className="text-sm">Teaching advanced Solidity programming and security principles.</p>
+                  <h4 className="font-semibold">{t.about.ethkipu.title}</h4>
+                  <p className="text-sm text-muted-foreground">{t.about.ethkipu.company}</p>
+                  <p className="text-sm">{t.about.ethkipu.description}</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold">SAP Development Analyst</h4>
-                  <p className="text-sm text-muted-foreground">ArcelorMittal • 2016-2018</p>
-                  <p className="text-sm">
-                    Integrating systems, analyzing, programming, and testing SAP and Oracle applications.
-                  </p>
+                  <h4 className="font-semibold">{t.about.arcelor.title}</h4>
+                  <p className="text-sm text-muted-foreground">{t.about.arcelor.company}</p>
+                  <p className="text-sm">{t.about.arcelor.description}</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Professor, Computer Science</h4>
-                  <p className="text-sm text-muted-foreground">UPTA • 2013 - Present</p>
-                  <p className="text-sm">
-                    Managing computer projects, teaching algorithms, programming, and blockchain development.
-                  </p>
+                  <h4 className="font-semibold">{t.about.upta.title}</h4>
+                  <p className="text-sm text-muted-foreground">{t.about.upta.company}</p>
+                  <p className="text-sm">{t.about.upta.description}</p>
                 </div>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle>Education & Certifications</CardTitle>
+                <CardTitle>{t.about.education}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h4 className="font-semibold">Ethereum Developer Certification</h4>
-                  <p className="text-sm text-muted-foreground">B9LAB Academy, London • 2019-2020</p>
+                  <h4 className="font-semibold">{t.about.b9labCert.title}</h4>
+                  <p className="text-sm text-muted-foreground">{t.about.b9labCert.company}</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-emerald-600">Master in Computer Science</h4>
-                  <p className="text-sm text-muted-foreground">UPTA, Venezuela • 2018-2020</p>
-                  <p className="text-sm text-emerald-600/80 font-medium">Advanced studies in computational systems and software engineering</p>
+                  <h4 className="font-semibold text-emerald-600">{t.about.master.title}</h4>
+                  <p className="text-sm text-muted-foreground">{t.about.master.company}</p>
+                  <p className="text-sm text-emerald-600/80 font-medium">{t.about.master.highlight}</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-emerald-600">Engineering in Computer Science</h4>
-                  <p className="text-sm text-muted-foreground">UPTA, Venezuela • 2008-2013</p>
-                  <p className="text-sm text-emerald-600/80 font-medium">Comprehensive foundation in computer science and engineering principles</p>
+                  <h4 className="font-semibold text-emerald-600">{t.about.engineering.title}</h4>
+                  <p className="text-sm text-muted-foreground">{t.about.engineering.company}</p>
+                  <p className="text-sm text-emerald-600/80 font-medium">{t.about.engineering.highlight}</p>
                 </div>
               </CardContent>
             </Card>
@@ -631,7 +631,7 @@ export default function Portfolio() {
       {/* Skills Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Technical Skills</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">{t.skills.title}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skills.map((skillGroup) => (
               <Card key={skillGroup.category}>
@@ -657,9 +657,9 @@ export default function Portfolio() {
       <section id="projects" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-center mb-4">Some Projects</h2>
+            <h2 className="text-3xl font-bold text-center mb-4">{t.projects.title}</h2>
             <p className="text-center text-muted-foreground mb-12">
-              Portfolio of blockchain applications, business solutions, and community platforms.
+              {t.projects.subtitle}
             </p>
           </ScrollReveal>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -676,30 +676,29 @@ export default function Portfolio() {
       <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Let's Connect</h2>
+            <h2 className="text-3xl font-bold mb-4">{t.contact.title}</h2>
             <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto text-pretty">
-              Interested in blockchain development, Web3 education, or collaboration opportunities? 
-              I'd love to hear from you.
+              {t.contact.subtitle}
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Contact Info */}
             <div>
-              <h3 className="text-xl font-semibold mb-6">Get in Touch</h3>
+              <h3 className="text-xl font-semibold mb-6">{t.contact.getInTouch}</h3>
               <div className="space-y-4">
                 <Card className="p-4 hover:shadow-lg transition-all duration-300">
                   <div className="flex items-center">
                     <MessageCircle className="w-6 h-6 text-emerald-600 mr-3" />
                     <div>
-                      <h4 className="font-semibold">Telegram</h4>
+                      <h4 className="font-semibold">{t.contact.telegram}</h4>
                       <Link
                         href="https://t.me/rubensantana"
                         className="text-emerald-600 hover:underline"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        @rubensantana
+                        {t.contact.connectTelegram}
                       </Link>
                     </div>
                   </div>
@@ -709,14 +708,14 @@ export default function Portfolio() {
                   <div className="flex items-center">
                     <Linkedin className="w-6 h-6 text-emerald-600 mr-3" />
                     <div>
-                      <h4 className="font-semibold">LinkedIn</h4>
+                      <h4 className="font-semibold">{t.contact.linkedin}</h4>
                       <Link
                         href="https://www.linkedin.com/in/rubensantana/"
                         className="text-emerald-600 hover:underline"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Connect with me
+                        {t.contact.connectLinkedin}
                       </Link>
                     </div>
                   </div>
@@ -726,14 +725,14 @@ export default function Portfolio() {
                   <div className="flex items-center">
                     <Twitter className="w-6 h-6 text-emerald-600 mr-3" />
                     <div>
-                      <h4 className="font-semibold">Twitter</h4>
+                      <h4 className="font-semibold">{t.contact.twitter}</h4>
                       <Link
                         href="https://x.com/0xrubens"
                         className="text-emerald-600 hover:underline"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Check my timeline
+                        {t.contact.connectTwitter}
                       </Link>
                     </div>
                   </div>
@@ -743,14 +742,14 @@ export default function Portfolio() {
                   <div className="flex items-center">
                     <Github className="w-6 h-6 text-emerald-600 mr-3" />
                     <div>
-                      <h4 className="font-semibold">GitHub</h4>
+                      <h4 className="font-semibold">{t.contact.github}</h4>
                       <Link
                         href="https://github.com/santanaruben"
                         className="text-emerald-600 hover:underline"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        See my repos
+                        {t.contact.connectGithub}
                       </Link>
                     </div>
                   </div>
@@ -769,9 +768,18 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="py-8 px-4 sm:px-6 lg:px-8 bg-card border-t">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-muted-foreground">© 2025 Ruben Santana. Building the Web3 through open-source development and education.</p>
+          <p className="text-muted-foreground">{t.footer.copyright}</p>
         </div>
       </footer>
+      </main>
     </div>
+  )
+}
+
+export default function Portfolio() {
+  return (
+    <LocaleProvider>
+      <PortfolioContent />
+    </LocaleProvider>
   )
 }

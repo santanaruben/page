@@ -3,8 +3,10 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowUp } from "lucide-react"
+import { useLocale } from "@/components/locale-provider"
 
 export function ScrollToTop() {
+  const { t } = useLocale()
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -36,7 +38,7 @@ export function ScrollToTop() {
           className="fixed bottom-4 right-4 z-50 bg-emerald-600 hover:bg-emerald-700 shadow-lg hover:shadow-xl transition-all duration-300"
         >
           <ArrowUp className="h-4 w-4" />
-          <span className="sr-only">Scroll to top</span>
+          <span className="sr-only">{t.a11y.scrollToTop}</span>
         </Button>
       )}
     </>

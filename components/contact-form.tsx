@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
+import { useLocale } from "@/components/locale-provider"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -12,6 +13,7 @@ import { Send, CheckCircle, AlertCircle } from "lucide-react"
 import emailjs from "@emailjs/browser"
 
 export function ContactForm() {
+  const { t } = useLocale()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -65,7 +67,7 @@ export function ContactForm() {
       setTimeout(() => setIsSubmitted(false), 5000)
     } catch (err) {
       console.error("Error sending email:", err)
-      setError(err instanceof Error ? err.message : "Failed to send message. Please try again.")
+      setError(err instanceof Error ? err.message : t.form.errorDefault)
     } finally {
       setIsSubmitting(false)
     }
@@ -76,10 +78,8 @@ export function ContactForm() {
       <Card className="max-w-md mx-auto">
         <CardContent className="pt-6 text-center">
           <CheckCircle className="w-16 h-16 text-emerald-600 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Message 
-          Sent!</h3>
-          <p className="text-muted-foreground">Thanks for 
-          reaching out. I'll get back to you soon.</p>
+          <h3 className="text-xl font-semibold mb-2">{t.form.successTitle}</h3>
+          <p className="text-muted-foreground">{t.form.successMessage}</p>
         </CardContent>
       </Card>
     )
@@ -88,7 +88,7 @@ export function ContactForm() {
   return (
     <Card className="max-w-md mx-auto">
       <CardHeader>
-        <CardTitle className="text-center">Send Message</CardTitle>
+        <CardTitle className="text-center">{t.form.sendMessage}</CardTitle>
       </CardHeader>
       <CardContent>
         {error && (
@@ -101,7 +101,7 @@ export function ContactForm() {
         )}
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <Label htmlFor="name" className="text-sm font-medium text-foreground mb-2 block">Nombre</Label>
+            <Label htmlFor="name" className="text-sm font-medium text-foreground mb-2 block">{t.form.name}</Label>
             <Input 
               id="name" 
               name="name"
@@ -112,7 +112,7 @@ export function ContactForm() {
             />
           </div>
           <div>
-            <Label htmlFor="email" className="text-sm font-medium text-foreground mb-2 block">Email</Label>
+            <Label htmlFor="email" className="text-sm font-medium text-foreground mb-2 block">{t.form.email}</Label>
             <Input 
               id="email" 
               name="email"
@@ -124,7 +124,7 @@ export function ContactForm() {
             />
           </div>
           <div>
-            <Label htmlFor="subject" className="text-sm font-medium text-foreground mb-2 block">Asunto</Label>
+            <Label htmlFor="subject" className="text-sm font-medium text-foreground mb-2 block">{t.form.subject}</Label>
             <Input 
               id="subject" 
               name="subject"
@@ -135,7 +135,7 @@ export function ContactForm() {
             />
           </div>
           <div>
-            <Label htmlFor="message" className="text-sm font-medium text-foreground mb-2 block">Mensaje</Label>
+            <Label htmlFor="message" className="text-sm font-medium text-foreground mb-2 block">{t.form.message}</Label>
             <Textarea 
               id="message" 
               name="message"
@@ -150,12 +150,12 @@ export function ContactForm() {
             {isSubmitting ? (
               <>
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2" />
-                Sending...
+                {t.form.sending}
               </>
             ) : (
               <>
                 <Send className="w-4 h-4 mr-2" />
-                Send Message
+                {t.form.submit}
               </>
             )}
           </Button>

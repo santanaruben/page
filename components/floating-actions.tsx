@@ -1,11 +1,13 @@
 "use client"
 
 import { useState } from "react"
+import { useLocale } from "@/components/locale-provider"
 import { Button } from "@/components/ui/button"
 import { MessageCircle, Github, Linkedin, Plus, X } from "lucide-react"
 import Link from "next/link"
 
 export function FloatingActions() {
+  const { t } = useLocale()
   const [isOpen, setIsOpen] = useState(false)
 
   const actions = [
@@ -66,7 +68,7 @@ export function FloatingActions() {
         }`}
       >
         {isOpen ? <X className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
-        <span className="sr-only">Toggle quick actions</span>
+        <span className="sr-only">{t.a11y.toggleActions}</span>
       </Button>
     </div>
   )

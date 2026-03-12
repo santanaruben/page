@@ -1,6 +1,7 @@
 "use client"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { useLocale } from "@/components/locale-provider"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Github, Eye } from "lucide-react"
@@ -25,6 +26,7 @@ interface EnhancedCardProps {
 }
 
 export function EnhancedCard({ project, featured = false }: EnhancedCardProps) {
+  const { t } = useLocale()
   const [imageLoaded, setImageLoaded] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
 
@@ -120,7 +122,7 @@ export function EnhancedCard({ project, featured = false }: EnhancedCardProps) {
             <Button size="sm" className="bg-emerald-600 hover:bg-emerald-700 transition-all duration-300" asChild>
               <Link href={`https://${project.link}`} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="w-4 h-4 mr-1" />
-                Live Site
+                {t.card.liveSite}
               </Link>
             </Button>
           )}
@@ -133,7 +135,7 @@ export function EnhancedCard({ project, featured = false }: EnhancedCardProps) {
             >
               <Link href={`https://${project.repo}`} target="_blank" rel="noopener noreferrer">
                 <Github className="w-4 h-4 mr-1" />
-                Code
+                {t.card.code}
               </Link>
             </Button>
           )}

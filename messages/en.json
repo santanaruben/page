@@ -1,0 +1,141 @@
+{
+  "nav": {
+    "about": "About",
+    "featured": "Featured",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Ruben Santana",
+    "subtitle": "Smart Contract Engineer & Computer Science Professor",
+    "description": "Experienced EVM developer and educator. Certified blockchain specialist building open-source solutions and contributing to the decentralized ecosystem. Core Member ETH Venezuela & Co-founder ETH Aragua.",
+    "viewFeatured": "View Featured Work",
+    "viewResume": "View Resume",
+    "getInTouch": "Get in Touch"
+  },
+  "achievements": {
+    "title": "Key Achievements",
+    "b9lab": {
+      "title": "B9LAB Certified",
+      "description": "Ethereum Developer Certification from London's premier blockchain academy"
+    },
+    "community": {
+      "title": "Community Leader",
+      "description": "Core ETH Venezuela & Co-founder ETH Aragua, reaching communities and developers"
+    },
+    "opensource": {
+      "title": "Open Source Contributor",
+      "description": "Multiple projects built with opensource principles, and contributing to Web3 education"
+    }
+  },
+  "featured": {
+    "title": "Featured Projects",
+    "subtitle": "Showcasing my most impactful work in blockchain development, community building, and business solutions."
+  },
+  "blog": {
+    "title": "Latest Articles",
+    "subtitle": "Insights on blockchain development, Web3 education, and the future of decentralized technology.",
+    "readMore": "Read More",
+    "viewAll": "View All Articles",
+    "tornado": {
+      "title": "Privacy in DeFi: The Tornado Cash Case",
+      "description": "Exploring the implications of privacy tools in decentralized finance and regulatory challenges."
+    },
+    "garden": {
+      "title": "The Infinite Garden",
+      "description": "A metaphor capturing Ethereum's essence: A garden is never something you finish, but something you always begin."
+    },
+    "seminar": {
+      "title": "Blockchain Seminar 2025: Onboarding",
+      "description": "A comprehensive journey introducing blockchain technology and practical applications. The event brought together professors and tech enthusiasts in a learning, networking, and professional development space focused on Web3 initiation."
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "experience": "Experience",
+    "education": "Education & Certifications",
+    "hodl": {
+      "title": "Backend, Smart Contract Engineer",
+      "company": "HODL Markets • 2025 - Present",
+      "description": "Specialized development of secure smart contracts and DeFi protocols. Conducting security reviews and optimizing code for efficiency."
+    },
+    "ucab": {
+      "title": "Professor, Blockchain Certificate Program",
+      "company": "UCAB • 2024",
+      "description": "Leading Solidity training courses and Web3 development methodologies."
+    },
+    "ethkipu": {
+      "title": "Professor, Ethereum Developer Pack",
+      "company": "ETHKIPU • 2024",
+      "description": "Teaching advanced Solidity programming and security principles."
+    },
+    "arcelor": {
+      "title": "SAP Development Analyst",
+      "company": "ArcelorMittal • 2016-2018",
+      "description": "Integrating systems, analyzing, programming, and testing SAP and Oracle applications."
+    },
+    "upta": {
+      "title": "Professor, Computer Science",
+      "company": "UPTA • 2013 - Present",
+      "description": "Managing computer projects, teaching algorithms, programming, and blockchain development."
+    },
+    "b9labCert": {
+      "title": "Ethereum Developer Certification",
+      "company": "B9LAB Academy, London • 2019-2020"
+    },
+    "master": {
+      "title": "Master in Computer Science",
+      "company": "UPTA, Venezuela • 2018-2020",
+      "highlight": "Advanced studies in computational systems and software engineering"
+    },
+    "engineering": {
+      "title": "Engineering in Computer Science",
+      "company": "UPTA, Venezuela • 2008-2013",
+      "highlight": "Comprehensive foundation in computer science and engineering principles"
+    }
+  },
+  "skills": {
+    "title": "Technical Skills"
+  },
+  "projects": {
+    "title": "Some Projects",
+    "subtitle": "Portfolio of blockchain applications, business solutions, and community platforms."
+  },
+  "contact": {
+    "title": "Let's Connect",
+    "subtitle": "Interested in blockchain development, Web3 education, or collaboration opportunities? I'd love to hear from you.",
+    "getInTouch": "Get in Touch",
+    "telegram": "Telegram",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "github": "GitHub",
+    "connectTelegram": "@rubensantana",
+    "connectLinkedin": "Connect with me",
+    "connectTwitter": "Check my timeline",
+    "connectGithub": "See my repos"
+  },
+  "form": {
+    "sendMessage": "Send Message",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "sending": "Sending...",
+    "submit": "Send Message",
+    "successTitle": "Message Sent!",
+    "successMessage": "Thanks for reaching out. I'll get back to you soon.",
+    "errorDefault": "Failed to send message. Please try again."
+  },
+  "card": {
+    "liveSite": "Live Site",
+    "code": "Code"
+  },
+  "footer": {
+    "copyright": "© 2025 Ruben Santana. Building the Web3 through open-source development and education."
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content",
+    "scrollToTop": "Scroll to top",
+    "toggleActions": "Toggle quick actions"
+  }
+}
