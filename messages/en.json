@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Ruben Santana",
-    "subtitle": "Smart Contract Engineer & Computer Science Professor",
+    "subtitle": "Web Developer, Smart Contract Engineer & Computer Science Professor",
     "description": "Experienced EVM developer and educator. Certified blockchain specialist building open-source solutions and contributing to the decentralized ecosystem. Core Member ETH Venezuela & Co-founder ETH Aragua.",
     "viewFeatured": "View Featured Work",
     "viewResume": "View Resume",
@@ -99,7 +99,8 @@
   },
   "projects": {
     "title": "Some Projects",
-    "subtitle": "Portfolio of blockchain applications, business solutions, and community platforms."
+    "subtitle": "Portfolio of blockchain applications, business solutions, and community platforms.",
+    "viewMore": "View more"
   },
   "contact": {
     "title": "Let's Connect",
@@ -131,7 +132,7 @@
     "code": "Code"
   },
   "footer": {
-    "copyright": "© 2025 Ruben Santana. Building the Web3 through open-source development and education."
+    "copyright": "© 2026 Ruben Santana. Building the Web3 through open-source development and education."
   },
   "a11y": {
     "skipToContent": "Skip to main content",

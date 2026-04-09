@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -292,7 +293,12 @@ const achievementConfig = [
 ]
 
 function PortfolioContent() {
-  const { t } = useLocale()
+  const { t, locale } = useLocale()
+  const initialProjectsToShow = 6
+  const projectsPerClick = 3
+  const [visibleProjectsCount, setVisibleProjectsCount] = useState(initialProjectsToShow)
+  const visibleProjects = projects.slice(0, visibleProjectsCount)
+  const hasMoreProjects = visibleProjectsCount < projects.length
 
   return (
     <div className="min-h-screen bg-background">
@@ -663,12 +669,22 @@ function PortfolioContent() {
             </p>
           </ScrollReveal>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
+            {visibleProjects.map((project, index) => (
               <ScrollReveal key={project.id} delay={(index % 6) * 100}>
                 <EnhancedCard project={project} />
               </ScrollReveal>
             ))}
           </div>
+          {hasMoreProjects && (
+            <div className="mt-8 flex justify-center">
+              <Button
+                onClick={() => setVisibleProjectsCount((prev) => Math.min(prev + projectsPerClick, projects.length))}
+                className="bg-emerald-600 hover:bg-emerald-700"
+              >
+                {locale === "es" ? "Ver más" : "View more"}
+              </Button>
+            </div>
+          )}
         </div>
       </section>
 
