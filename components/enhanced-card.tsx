@@ -30,6 +30,11 @@ export function EnhancedCard({ project, featured = false }: EnhancedCardProps) {
   const [imageLoaded, setImageLoaded] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
 
+  const translatedProject = t.projects?.items?.[String(project.id)]
+  const name = translatedProject?.name ?? project.name
+  const description = translatedProject?.description ?? project.description
+  const type = translatedProject?.type ?? project.type
+
   return (
     <Card
       className={`group hover:shadow-2xl transition-all duration-500 overflow-hidden border-0 shadow-md hover:-translate-y-2 ${
@@ -42,7 +47,7 @@ export function EnhancedCard({ project, featured = false }: EnhancedCardProps) {
         <div className="relative h-48 overflow-hidden bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950 dark:to-teal-950">
           <Image
             src={project.image || "/placeholder.svg"}
-            alt={project.name}
+            alt={name}
             fill
             className={`object-cover transition-all duration-700 ${
               imageLoaded ? "opacity-100 scale-100" : "opacity-0 scale-110"
@@ -87,7 +92,7 @@ export function EnhancedCard({ project, featured = false }: EnhancedCardProps) {
       <CardHeader className="pb-3">
         <div className="flex justify-between items-start mb-2">
           <CardTitle className={`text-lg transition-colors duration-300 ${isHovered ? "text-emerald-600" : ""}`}>
-            {project.name}
+            {name}
           </CardTitle>
           <Badge
             variant="outline"
@@ -95,10 +100,10 @@ export function EnhancedCard({ project, featured = false }: EnhancedCardProps) {
               featured ? "border-emerald-300 text-emerald-700 bg-emerald-50 dark:bg-emerald-950" : ""
             }`}
           >
-            {project.type}
+            {type}
           </Badge>
         </div>
-        <CardDescription className="text-sm leading-relaxed">{project.description}</CardDescription>
+        <CardDescription className="text-sm leading-relaxed">{description}</CardDescription>
       </CardHeader>
 
       <CardContent className="pt-0">

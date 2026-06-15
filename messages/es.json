@@ -100,7 +100,32 @@
   "projects": {
     "title": "Algunos Proyectos",
     "subtitle": "Portafolio de aplicaciones blockchain, soluciones empresariales y plataformas comunitarias.",
-    "viewMore": "Ver más"
+    "viewMore": "Ver más",
+    "items": {
+      "22": { "name": "Lobos de Ribas", "description": "Página web de la escuela de baloncesto Lobos de Ribas", "type": "Sitio Deportivo" },
+      "21": { "name": "Alicanto Group", "description": "Sitio web de empresa de construcción e ingeniería", "type": "Sitio Empresarial" },
+      "0": { "name": "ETH Aragua Landing", "description": "Página de la comunidad Ethereum Aragua", "type": "Plataforma Comunitaria" },
+      "1": { "name": "Plataforma de Blog", "description": "Blog de Ethereum Aragua con contenido educativo y artículos sobre privacidad", "type": "Plataforma de Contenido" },
+      "2": { "name": "ETH Venezuela Landing", "description": "Página de la comunidad Ethereum Venezuela", "type": "Plataforma Comunitaria" },
+      "3": { "name": "Faucet", "description": "Sitio faucet EVM hecho con solidity, next, typescript y tailwind para retirar fondos de una cadena seleccionada.", "type": "Herramienta DeFi" },
+      "4": { "name": "Sistema de Certificación Ethereum", "description": "Aplicación descentralizada para certificación de cursos con verificación blockchain", "type": "dApp" },
+      "5": { "name": "PlayerBlocks", "description": "Comunidad Play to Earn", "type": "Plataforma de Gaming" },
+      "6": { "name": "UBI Burner", "description": "Herramienta deflacionaria de Renta Básica Universal", "type": "Herramienta DeFi" },
+      "7": { "name": "Vouch Market", "description": "Valida perfiles en Proof Of Humanity y obtén recompensas", "type": "dApp" },
+      "8": { "name": "CryptoJustice", "description": "Sistema para Procedimientos Legales usando Ethereum y React", "type": "Legal Tech" },
+      "9": { "name": "Sistema de Peajes", "description": "Sistema regulado en Ethereum de carreteras de peaje en las que los vehículos pagan para circular", "type": "Smart Contract" },
+      "10": { "name": "Juego Ethereum Piedra Papel Tijera", "description": "Juego clásico donde los jugadores apuestan una cantidad de ETH, luego cada jugador envía su jugada, y el contrato premia al ganador con el Ether apostado", "type": "Gaming dApp" },
+      "11": { "name": "Biblioteca Descentralizada", "description": "Sistema de biblioteca en Ethereum donde los usuarios pueden tener propiedad de libros y transferir sus libros (ERC-721) a la biblioteca y a otros usuarios", "type": "Plataforma NFT" },
+      "12": { "name": "Tienda Descentralizada", "description": "Sistema de tienda en Ethereum, usando un ERC-20 como moneda necesaria para realizar transacciones", "type": "eCommerce dApp" },
+      "13": { "name": "Armani Engineering Corp", "description": "Sitio web de empresa de automatización industrial y servicios de IA", "type": "Sitio Empresarial" },
+      "14": { "name": "Miranda Designs", "description": "Empresa de diseño de ingeniería y servicios de energía renovable", "type": "Sitio Corporativo" },
+      "15": { "name": "Sitio Empresarial", "description": "Sitio web empresarial para servicios eléctricos", "type": "Sitio Corporativo" },
+      "16": { "name": "Sistema Splitter", "description": "Aplicación divisora de montos para ethereum", "type": "Herramienta DeFi" },
+      "17": { "name": "Sistema de Remesas", "description": "Aplicación de remesas para ethereum", "type": "FinTech dApp" },
+      "18": { "name": "Acortador Corporativo", "description": "Un acortador de enlaces corporativo con página de estadísticas y localización de tráfico", "type": "Herramienta de Utilidad" },
+      "19": { "name": "Promptopia", "description": "Promptopia es una herramienta de prompts con IA de código abierto para el mundo moderno, para descubrir, crear y compartir prompts creativos", "type": "Plataforma de IA" },
+      "20": { "name": "Showcase de Carros", "description": "Un sitio hecho con next, typescript y tailwind que gestiona los datos de un alquiler de carros o una tienda de venta de vehículos.", "type": "Plataforma de Negocios" }
+    }
   },
   "contact": {
     "title": "Conectemos",

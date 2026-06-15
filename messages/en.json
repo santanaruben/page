@@ -100,7 +100,32 @@
   "projects": {
     "title": "Some Projects",
     "subtitle": "Portfolio of blockchain applications, business solutions, and community platforms.",
-    "viewMore": "View more"
+    "viewMore": "View more",
+    "items": {
+      "22": { "name": "Lobos de Ribas", "description": "Basketball school website for Lobos de Ribas", "type": "Sports Website" },
+      "21": { "name": "Alicanto Group", "description": "Construction and engineering services company website", "type": "Business Website" },
+      "0": { "name": "ETH Aragua Landing", "description": "Ethereum Aragua community page", "type": "Community Platform" },
+      "1": { "name": "Blog Platform", "description": "Ethereum Aragua Blog with educational content and privacy articles", "type": "Content Platform" },
+      "2": { "name": "ETH Venezuela Landing", "description": "Ethereum Venezuela community page", "type": "Community Platform" },
+      "3": { "name": "Faucet", "description": "An EVM faucet site made with solidity, next, typescript, and tailwind to withdraw funds from a selected chain.", "type": "DeFi Tool" },
+      "4": { "name": "Ethereum Certification System", "description": "Decentralized application for certification of courses with blockchain verification", "type": "dApp" },
+      "5": { "name": "PlayerBlocks", "description": "Play to Earn community", "type": "Gaming Platform" },
+      "6": { "name": "UBI Burner", "description": "Universal Basic Income deflationary tool", "type": "DeFi Tool" },
+      "7": { "name": "Vouch Market", "description": "Validate profiles in Proof Of Humanity and get rewarded", "type": "dApp" },
+      "8": { "name": "CryptoJustice", "description": "System for Legal Procedures using Ethereum and React", "type": "Legal Tech" },
+      "9": { "name": "Toll Road System", "description": "Ethereum regulated system of toll roads on which vehicles pay to drive on them", "type": "Smart Contract" },
+      "10": { "name": "Ethereum Rock Paper Scissors Game", "description": "Classic game where the players bet an ETH amount, then each player submits their move, and the contract rewards the winner with the Ether wagered", "type": "Gaming dApp" },
+      "11": { "name": "Decentralized Library", "description": "Ethereum library system where users can have book ownership and transfer their books (ERC-721) to the library and to other users", "type": "NFT Platform" },
+      "12": { "name": "Decentralized Store", "description": "Ethereum Store system, using an ERC-20 as the coin necessary to make transactions", "type": "eCommerce dApp" },
+      "13": { "name": "Armani Engineering Corp", "description": "Industrial automation and AI services company website", "type": "Business Website" },
+      "14": { "name": "Miranda Designs", "description": "Engineering design and renewable energy services company", "type": "Corporate Site" },
+      "15": { "name": "Business Website", "description": "Enterprise website for electrical services", "type": "Corporate Site" },
+      "16": { "name": "Splitter System", "description": "Amount splitter application for ethereum", "type": "DeFi Tool" },
+      "17": { "name": "Remittance System", "description": "Remittance application for ethereum", "type": "FinTech dApp" },
+      "18": { "name": "Corporate Shortener", "description": "A corporate link shortener with statistics page, and traffic location", "type": "Utility Tool" },
+      "19": { "name": "Promptopia", "description": "Promptopia is an open-source AI prompting tool for modern world to discover, create and share creative prompts", "type": "AI Platform" },
+      "20": { "name": "Cars Showcase", "description": "A site made with next, typescript, and tailwind that manages the data of a car rental or a car sales store.", "type": "Business Platform" }
+    }
   },
   "contact": {
     "title": "Let's Connect",

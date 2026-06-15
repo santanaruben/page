@@ -52,6 +52,16 @@ const projects: Array<{
   image: string
 }> = [
   {
+    id: 22,
+    name: "Lobos de Ribas",
+    description: "Basketball school website for Lobos de Ribas",
+    type: "Sports Website",
+    link: "lobosderibas.com",
+    repo: undefined,
+    tags: ["Sports", "Basketball", "School", "Next.js"],
+    image: "/images/lobos.jpg",
+  },
+  {
     id: 21,
     name: "Alicanto Group",
     description: "Construction and engineering services company website",
@@ -358,7 +368,7 @@ function PortfolioContent() {
                 className="hover:border-emerald-300 hover:text-white dark:hover:border-emerald-400 dark:hover:text-emerald-400 hover:scale-105 transition-all duration-300 bg-transparent"
               >
                 <Link 
-                  href="/docs/CV_Ruben_Santana_2025_en.pdf" 
+                  href={`/docs/CV_Ruben_Santana_2025_${locale}.pdf`}
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
